@@ -7,9 +7,9 @@ public class LinearEquationRunner {
 
         System.out.println("Enter coordinate 1: ");
         String coord1 = scan.nextLine();
-        int indexLen1 = coord1.indexOf(",");
+        int indexLen1 = coord1.indexOf(","); //Both numbers separate at the comma so all I need to do is isolate them through finding the index of the comma.
         String coordx1 = coord1.substring(1, indexLen1);
-        String coordy1 = coord1.substring(indexLen1+2, coord1.length()-1);
+        String coordy1 = coord1.substring(indexLen1+2, coord1.length()-1); // +2 for the space in between comma and y number
         int intCordX1 = Integer.parseInt(coordx1);
         int intCordY1 = Integer.parseInt(coordy1);
 
@@ -22,7 +22,7 @@ public class LinearEquationRunner {
         int intCordY2 = Integer.parseInt(coordy2);
 
         if(intCordX1 == intCordX2) {
-            System.out.println("These points are on a vertical line: x = " + intCordX1);
+            System.out.println("These points are on a vertical line: x = " + intCordX1); // Run this first in case x1 x2 are equal, always print if meets this case.
         } else {
             LinearEquation point1 = new LinearEquation(intCordX1, intCordY1,intCordX2,intCordY2);
             System.out.println(point1.lineInfo());

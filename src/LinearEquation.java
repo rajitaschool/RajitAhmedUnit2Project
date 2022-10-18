@@ -18,7 +18,7 @@ public class LinearEquation {
     /* Calculates and returns distance between (x1, y1) and (x2, y2), rounded to
    the nearest hundredth */
     public double distance() {
-        double distance = Math.sqrt((Math.pow(x2-x1, 2)) + (Math.pow(y2-y1,2)));
+        double distance = Math.sqrt((Math.pow(x2-x1, 2)) + (Math.pow(y2-y1,2))); //Distance formula converted to Java
         double roundOffDistance= roundedToHundredth(distance);
         return roundOffDistance;
     }
@@ -65,7 +65,7 @@ public class LinearEquation {
         public String equation() {
             String linEquation = "y = ";
             if (slope() == 0) {
-                return "These points are on a vertical line: x = " + x1;
+                return linEquation += yIntercept(); //Redundant but leaving here because not sure of a quicker alternative + Lazy
             } else if (slope() == 1) {
                 linEquation += "x";
             } else if (slope() == -1) {
@@ -87,6 +87,7 @@ public class LinearEquation {
             } else {
                 return linEquation + " - " + Math.abs(yIntercept());
             }
+            // How this works is it checks all cases of the slope and y intercept to work with all 16 test cases.
             }
 
 
@@ -104,7 +105,7 @@ public class LinearEquation {
     HINT:  the Math.round method can help with this!
  */
         public double roundedToHundredth(double toRound) {
-            return Math.round (toRound * 100.0)/ 100.0;
+            return Math.round (toRound * 100.0)/ 100.0; // Multiply by a double to cast to a double.
         }
 
         /* Returns a string that includes all information about the linear equation, each on
@@ -120,17 +121,13 @@ public class LinearEquation {
 
   */
         public String lineInfo() {
-            if(x1==x2) {
-                return "These points are on a vertical line: x = " + x1;
-            } else {
-                String info = "The two points are: (" + x1 + ", " + y1 + ") and (" + x2 + ", " + y2 +")";
-                info += "\nThe equation of the line between these points is: " + equation();
-                info += "\nThe slope of this line is: " + slope();
-                info += "\nThe y-intercept of the line is: " + yIntercept();
-                info += "\nThe distance between the two points is: " + distance();
-                return info;
+            String info = "The two points are: (" + x1 + ", " + y1 + ") and (" + x2 + ", " + y2 +")";
+            info += "\nThe equation of the line between these points is: " + equation();
+            info += "\nThe slope of this line is: " + slope();
+            info += "\nThe y-intercept of the line is: " + yIntercept();
+            info += "\nThe distance between the two points is: " + distance();
+            return info;
             }
         }
 
-    }
 
