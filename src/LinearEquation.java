@@ -62,72 +62,72 @@ public class LinearEquation {
     HINT: Absolute value might be helpful for printing negative y-intercepts as
            subtraction!
  */
-        public String equation() {
-            String linEquation = "y = ";
-            if (slope() == 0) {
-                return linEquation += yIntercept(); //Redundant but leaving here because not sure of a quicker alternative + Lazy
-            } else if (slope() == 1) {
-                linEquation += "x";
-            } else if (slope() == -1) {
-                linEquation += "-x";
-            }else if(slope() % 1 == 0) {
-                linEquation += (int)slope() +"x";
-            } else if((y2-y1) <0 && (x2-x1) <0) {
-                linEquation += Math.abs(y2-y1) + "/" + Math.abs(x2-x1) + "x";
-            } else if((y2-y1) <0 || (x2-x1) <0) {
-                linEquation += "-" + Math.abs(y2-y1) + "/" + Math.abs(x2-x1) + "x";
-            } else {
-                linEquation += (y2-y1) + "/" + (x2-x1) + "x";
-            }
-
-            if (yIntercept() == 0) {
-                return linEquation;
-            } else if (yIntercept() > 0) {
-                return linEquation + " + " + yIntercept();
-            } else {
-                return linEquation + " - " + Math.abs(yIntercept());
-            }
-            // How this works is it checks all cases of the slope and y intercept to work with all 16 test cases.
-            }
-
-
-        /* Returns a String of the coordinate point on the line that has the given x value, with
-   both x and y coordinates as decimals to the nearest hundredth, e.g (-5.0, 6.75) */
-        public String coordinateForX(double xValue) {
-            double yPoint = (slope() * xValue) + yIntercept();
-            double roundedyPoint = roundedToHundredth(yPoint);
-            return "The point on the line is (" + xValue + ", " + roundedyPoint + ")";
+    public String equation() {
+        String linEquation = "y = ";
+        if (slope() == 0) {
+            return linEquation += yIntercept(); //Redundant but leaving here because not sure of a quicker alternative + Lazy
+        } else if (slope() == 1) {
+            linEquation += "x";
+        } else if (slope() == -1) {
+            linEquation += "-x";
+        }else if(slope() % 1 == 0) {
+            linEquation += (int)slope() +"x";
+        } else if((y2-y1) <0 && (x2-x1) <0) {
+            linEquation += Math.abs(y2-y1) + "/" + Math.abs(x2-x1) + "x";
+        } else if((y2-y1) <0 || (x2-x1) <0) {
+            linEquation += "-" + Math.abs(y2-y1) + "/" + Math.abs(x2-x1) + "x";
+        } else {
+            linEquation += (y2-y1) + "/" + (x2-x1) + "x";
         }
 
-        /* "Helper" method for use elsewhere in your methods; returns the value toRound rounded
-    to the nearest hundredth
-
-    HINT:  the Math.round method can help with this!
- */
-        public double roundedToHundredth(double toRound) {
-            return Math.round (toRound * 100.0)/ 100.0; // Multiply by a double to cast to a double.
+        if (yIntercept() == 0) {
+            return linEquation;
+        } else if (yIntercept() > 0) {
+            return linEquation + " + " + yIntercept();
+        } else {
+            return linEquation + " - " + Math.abs(yIntercept());
+        }
+        // How this works is it checks all cases of the slope and y intercept to work with all 16 test cases.
         }
 
-        /* Returns a string that includes all information about the linear equation, each on
-   separate lines:
-     - The original points: (x1, y1) and (x2, y2)
-     - The equation of the line in y = mx + b format (using equation() method)
-     - The slope of the line, as a decimal (using slope() method)
-     - The y-intercept of the line (using yIntercept() method)
-     - The distance between the two points (using distance() method)
 
-  This method should call all other appropriate methods to get the info it needs:
-  equation(), slope(), yIntercept(), distance().
+    /* Returns a String of the coordinate point on the line that has the given x value, with
+both x and y coordinates as decimals to the nearest hundredth, e.g (-5.0, 6.75) */
+    public String coordinateForX(double xValue) {
+        double yPoint = (slope() * xValue) + yIntercept();
+        double roundedyPoint = roundedToHundredth(yPoint);
+        return "The point on the line is (" + xValue + ", " + roundedyPoint + ")";
+    }
 
-  */
-        public String lineInfo() {
-            String info = "The two points are: (" + x1 + ", " + y1 + ") and (" + x2 + ", " + y2 +")";
-            info += "\nThe equation of the line between these points is: " + equation();
-            info += "\nThe slope of this line is: " + slope();
-            info += "\nThe y-intercept of the line is: " + yIntercept();
-            info += "\nThe distance between the two points is: " + distance();
-            return info;
-            }
+    /* "Helper" method for use elsewhere in your methods; returns the value toRound rounded
+to the nearest hundredth
+
+HINT:  the Math.round method can help with this!
+*/
+    public double roundedToHundredth(double toRound) {
+        return Math.round (toRound * 100.0)/ 100.0; // Multiply by a double to cast to a double.
+    }
+
+    /* Returns a string that includes all information about the linear equation, each on
+separate lines:
+ - The original points: (x1, y1) and (x2, y2)
+ - The equation of the line in y = mx + b format (using equation() method)
+ - The slope of the line, as a decimal (using slope() method)
+ - The y-intercept of the line (using yIntercept() method)
+ - The distance between the two points (using distance() method)
+
+This method should call all other appropriate methods to get the info it needs:
+equation(), slope(), yIntercept(), distance().
+
+*/
+    public String lineInfo() {
+        String info = "The two points are: (" + x1 + ", " + y1 + ") and (" + x2 + ", " + y2 +")";
+        info += "\nThe equation of the line between these points is: " + equation();
+        info += "\nThe slope of this line is: " + slope();
+        info += "\nThe y-intercept of the line is: " + yIntercept();
+        info += "\nThe distance between the two points is: " + distance();
+        return info;
         }
+    }
 
 
