@@ -68,7 +68,9 @@ public class LinearEquation {
                 return "These points are on a vertical line: x = " + x1;
             } else if (slope() == 1) {
                 linEquation += "x";
-            } else if(slope() % 1 == 0) {
+            } else if (slope() == -1) {
+                linEquation += "-x";
+            }else if(slope() % 1 == 0) {
                 linEquation += (int)slope() +"x";
             } else if((y2-y1) <0 && (x2-x1) <0) {
                 linEquation += Math.abs(y2-y1) + "/" + Math.abs(x2-x1) + "x";
