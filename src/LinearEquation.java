@@ -4,7 +4,7 @@ public class LinearEquation {
     private int y1;
     private int x2;
     private int y2;
-    static void start() {
+    public static void start() {
         System.out.println("Welcome to my Linear Equation calculator!");
     } //Static method that introduces user without creating object
     //Creates Linear Equation object//
@@ -65,7 +65,7 @@ public class LinearEquation {
     public String equation() {
         String linEquation = "y = ";
         if (slope() == 0) {
-            return linEquation += yIntercept(); //Redundant but leaving here because not sure of a quicker alternative + Lazy
+            return linEquation += yIntercept();
         } else if (slope() == 1) {
             linEquation += "x";
         } else if (slope() == -1) {
