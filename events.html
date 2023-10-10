@@ -1,0 +1,95 @@
+<!--Events Page Of the Project-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "styles.css" /> <!--Where I import both my stylesheet and my javascript, all 3 html files use the same stylesheet and javascript file-->
+    <script src = "utilities.js"></script>
+    <title>Upcoming Events</title>
+</head>
+<body>
+    <!--Menu Made Using Nav element Each anchor tag links to a different page-->
+    <div class = "menu" >
+        <nav>
+            <h2 class="navTitle">Level<span class="navTitle2"> 2</span> project</h2>
+            <ul>
+                <li><a href = "index.html">Home</a></li>
+                <li><a href = "guests.html">Guests</a></li>
+                <li><a href = "events.html">Events</a></li>
+            </ul>
+            <button class = "favButton" onclick = "displayFavoritePlayer();">Click For My NBA Player In Console</button> <!--Similar to the other 2 buttons, it just prints my favorite basketball player in the console-->
+        </nav>
+    </div>
+    <!--The header displays above the 3 divs to describe what page the User is Looking At-->
+    <div class="header">
+        <h1>Upcoming Events</h1>
+    </div>
+    <!--The following is split up into 4 divs, but it follows the general same pattern: Matchup followed by players participating. There are 2 of these.-->
+    <div class="matchup"> <!--Matchup #1-->
+        <img src="images/lakers_logo.png" alt="Lakers Logo" class="matchup-image">
+        <div class="mathcup-column">
+            <p class="matchup-info">Lakers vs. Nuggets</p>
+            <p class="matchup-date">October 24, 7:30 PM</p>
+        </div>
+        <img src="images/nuggets_logo.png" alt="Nuggets Logo" class="matchup-image2">
+    </div>
+
+    <div class="event-desc">
+        <p>First game of the NBA season, the current NBA champions versus Lebron James and company, this is expected to be a very close game amongst the 2 teams.</p>
+    </div>
+    
+    <div class="players-participating"> <!--Playes in Match #1-->
+        <h2 class="section-header">Players Participating:</h2>
+        <div class="player-info">
+            <img src="images/lebron_james.png" alt="Lebron James" class="player-image">
+            <p class="player-name">Lebron James</p>
+        </div>
+        <div class="player-info">
+            <img src="images/anthony_davis.png" alt="Anthony Davis" class="player-image">
+            <p class="player-name">Anthony Davis</p>
+        </div>
+        <div class="player-info">
+            <img src="images/nikola_jokic.png" alt="Nikola Jokic" class="player-image">
+            <p class="player-name">Nikola Jokic</p>
+        </div>
+        <div class="player-info">
+            <img src="images/jamal_murray.png" alt="Jamal Murray" class="player-image">
+            <p class="player-name">Jamal Murray</p>
+        </div>
+    </div>
+
+    <div class="matchup"> <!--Matchup #2-->
+        <img src="images/suns_logo.png" alt="Suns Logo" class="matchup-image">
+        <div class="matchup-column">
+            <p class="matchup-info">Suns vs. Warriors</p>
+            <p class="matchup-date">October 24, 10:00 PM</p>
+        </div>
+        <img src="images/warriors_logo.png" alt="Warriors Logo" class="matchup-image2">
+    </div>
+
+    <div class="event-desc">
+        <p>Second game of the NBA season, there are new faces for both the Warriors and the suns, with the warriors acquiring a former Sun. Will Chris Paul get his revenge or will Kevin Durant and the superteam Phoenix suns win?</p>
+    </div>
+
+    <div class="players-participating"> <!--Playes in Match #2-->
+        <h2 class="section-header">Players Participating:</h2>
+        <div class="player-info">
+            <img src="images/stephen_curry.png" alt="Stephen Curry" class="player-image">
+            <p class="player-name">Stephen Curry</p>
+        </div>
+        <div class="player-info">
+            <img src="images/chris_paul.png" alt="Chris Paul" class="player-image">
+            <p class="player-name">Chris Paul</p>
+        </div>
+        <div class="player-info">
+            <img src="images/kevin_durant.png" alt="Kevin Durant" class="player-image">
+            <p class="player-name">Kevin Durant</p>
+        </div>
+        <div class="player-info">
+            <img src="images/devin_booker.png" alt="Devin Booker" class="player-image">
+            <p class="player-name">Devin Booker</p>
+        </div>
+    </div>
+</body>
+</html>

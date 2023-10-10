@@ -1,0 +1,70 @@
+<!--Guests Page Of the Project-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "styles.css" /> <!--Where I import both my stylesheet and my javascript, all 3 html files use the same stylesheet and javascript file-->
+    <script src = "utilities.js"></script>
+    <title>NBA Season Opener Guests</title>
+</head>
+<body>
+    <!--Menu Made Using Nav element Each anchor tag links to a different page-->
+    <div class = "menu" >
+        <nav>
+            <h2 class="navTitle">Level<span class="navTitle2"> 2</span> project</h2>
+            <ul>
+                <li><a href = "index.html">Home</a></li>
+                <li><a href = "guests.html">Guests</a></li>
+                <li><a href = "events.html">Events</a></li>
+            </ul>
+            <button class = "favButton" onclick = "displayFavoriteCelebrity();">Click For My Favorite Celebrity In Console</button> <!--Similar to the other 2 buttons, it just prints my favorite celebrity in the console-->
+        </nav>
+    </div>
+    <!--The header displays above the 3 divs to describe what page the User is Looking At-->
+    <div class="header">
+        <h1>NBA Season Opener Guests</h1>
+    </div>
+    <div class="tabs"> <!--I create a div to display the 2 buttons together right below the navigation bar-->
+        <button class="tab-button" onclick="toggleGuests('primaryGuests');">Primary Guests</button> <!--The Primary Guests and secondary guests are first hidden and the button must be clicked to view the 2 divs below, they can be hidden by clicking the button again-->
+        <button class="tab-button" onclick="toggleGuests('secondaryGuests');">Secondary Guests</button>
+    </div>
+    <!--The 2 divs both share the same class but share 2 different id's, they are similarly formatted with 3 guests with a picture of them, their name, and a description about them-->
+    <div id="primaryGuests" class="guests"> <!--Primary Guests-->
+        <div class="guest-div">
+            <img src="images/lebron_james_image.jpg" alt="LeBron James">
+            <h3>LeBron James</h3>
+            <p>Current NBA leading scorer, 4-time NBA champion, current Lakers player. Available times to speak: 3:00 PM to 9:00 PM.</p>
+        </div>
+        <div class="guest-div">
+            <img src="images/michael_jordan_image.png" alt="Michael Jordan">
+            <h3>Michael Jordan</h3>
+            <p>NBA Hall of Famer, six-time NBA champion, former Bulls legend. Available times to speak: 2:00 PM to 5:00 PM.</p>
+        </div>
+        <div class="guest-div">
+            <img src="images/shaquille_oneal_image.png" alt="Shaquille O'Neal">
+            <h3>Shaquille O'Neal</h3>
+            <p>Hall of Fame center, 4-time NBA champion, and Lakers legend. Available times to speak: 4:00 PM to 6:00 PM.</p>
+        </div>
+    </div>
+    
+    <div id="secondaryGuests" class="guests"> <!--Secondary Guests-->
+        <div class="guest-div">
+            <img src="images/tom_brady_image.png" alt="Tom Brady">
+            <h3>Tom Brady</h3>
+            <p>Hall of Fame quarterback who was a Patriots legend. Meet him at the Southwest booth.</p>
+        </div>
+        <div class="guest-div">
+            <img src="images/mr_beast_image.png" alt="MrBeast">
+            <h3>MrBeast</h3>
+            <p>Internet sensation with millions of followers. His booth is near the center of the arena.</p>
+        </div>
+        <div class="guest-div">
+            <img src="images/kevin_hart_image.png" alt="Kevin Hart">
+            <h3>Kevin Hart</h3>
+            <p>World-famous actor and comedian. His booth is near the entrance of the Arena.</p>
+        </div>
+    </div>
+    
+</body>
+</html>

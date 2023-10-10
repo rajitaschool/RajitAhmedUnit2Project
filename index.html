@@ -1,0 +1,50 @@
+<!--Home Page Of the Project-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "styles.css" /> <!--Where I import both my stylesheet and my javascript, all 3 html files use the same stylesheet and javascript file-->
+    <script src = "utilities.js"></script>
+    <title>NBA Season Opener Preview</title>
+</head>
+<body>
+    <!--Menu Made Using Nav element Each anchor tag links to a different page-->
+    <div class = "menu" >
+        <nav>
+            <h2 class="navTitle">Level<span class="navTitle2"> 2</span> project</h2>
+            <ul> <!--I use a list tag to keep the ul and li tags to create an unordered list to group the 3 different anchor tags together-->
+                <li><a href = "index.html">Home</a></li>
+                <li><a href = "guests.html">Guests</a></li>
+                <li><a href = "events.html">Events</a></li>
+            </ul>
+            <button class = "favButton" onclick = "displayFavoriteTeam();">Click For My Favorite Team In Console</button> <!--This button calls a method from the utilites.js which prints my favorite team in the console-->
+        </nav>
+    </div>
+    <!--The header displays above the 3 divs to describe what page the User is Looking At-->
+    <div class="header">
+        <h1>Home Page</h1>
+    </div>
+    <!--Below the Header is 3 divs each with content describing the event with a image next to the caption. All of them are under the same class "home-desc"-->
+    <div class="home-desc">
+        <img src="images/nba_logo.png" alt="NBA Logo">
+        <div class="home-content">
+            <p>This homepage welcomes you to the beginning of the 2023-2024 NBA season! After a long-awaited 4 months of waiting, the season is just knocking on our corner!</p>
+        </div>
+    </div>
+    
+    <div class="home-desc">
+        <img src="images/lebron_scoring.jpg" alt="Lebron James Scoring">
+        <div class="home-content">
+            <p>Lets look back at the previous season, lots of new things happened! The Denver Nuggets won the finals, the 8th seeded heat almost reaching their cinderella story, and even Lebron James breaking the all-time points record!</p>
+        </div>
+    </div>
+    
+    <div class="home-desc">
+        <img src="images/draft_class.jpg" alt="Draft Class">
+        <div class="home-content">
+            <p>This season has lots stored for us, with the incoming NBA superstars Wenbanyama and Scoot and the possible exit of future hall of famers. New super teams and a new environment will make this a great season to watch all throughout the year!</p>
+        </div>
+    </div>
+</body>
+</html>
